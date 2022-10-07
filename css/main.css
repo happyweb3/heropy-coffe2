@@ -1,0 +1,642 @@
+@charset "utf-8";
+
+main{
+    padding-top: 120px;
+    overflow-x: hidden;
+}
+
+.badges{
+    width: 130px;
+    position: fixed;
+    right: 5px;top: 125px;
+    z-index: 90;
+}
+.badges img{
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0,.3);
+}
+
+/* 비주얼영역서식 */
+.visual{
+    height: 646px;
+    background-image: url('../images/visual_bg.jpg');
+}
+.visual>h2{
+    display: none;
+}
+.visual .inner{
+    width: 1100px;height: 646px;
+    margin: 0px auto;
+    position: relative;
+}
+.title,.cup1,.cup1_txt,.cup2,.cup2_txt,.spoon{
+    position: absolute;
+}
+.title{top: 40px;left: -10px;}
+.cup1{bottom: 0px; right: -47px;}
+.cup1_txt{top: 40px; right: 60px;}
+.cup2{bottom: 0px;right: 162px;}
+.cup2_txt{top: 186px;right: 412px;}
+.spoon{bottom: 0px; left: 275px;}
+
+.detail_btn{
+    width: 130px;
+    padding: 10px;
+    border: 4px;
+    border: 2px solid #592b18;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    transition: 0.4s;
+    color: #592b18;
+    transform: translateX(130px);
+    border-radius: 3px;
+}
+.detail_btn:hover{
+    color: #fff;
+    background: #592b18;
+}
+.fadein{
+    /*display: none; 애니메이션 안먹힘 */
+    opacity: 0;
+}
+
+/* 공지사항 서식 */
+.notice{
+    height: 62px;
+    background: rgb(51,51,51);
+    background: linear-gradient(90deg, rgba(51,51,51,1) 61.5%, rgba(246,245,239,1) 61.5%);
+}
+.n_inner{
+    width: 1100px;
+    margin: 0px auto;
+    display: flex;
+}
+.n_inner__left{
+    width: 70%;
+    display: flex;
+    overflow: hidden;
+    background: #333;
+}
+.n_inner__right{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+.s_notice{height: 100%;width: 100%;}
+.swiper {
+    width: 100%;
+    height: 62px;
+    
+  }
+
+  .s_notice  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    
+  }
+
+ .s_notice .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+.s_notice .swiper-slide a{
+    font-size: 12px;
+    color: #fff;
+}
+.n_inner__left h2{
+    color: #fff;
+    font-size: 18px;
+    width: 100px;
+    padding-top: 20px;
+}
+
+.n_inner__right h2{
+    width: 100px;
+    color: #333;
+    padding-top: 24px;
+    font-size: 15px;
+}
+
+/* 기호버튼서식 */
+.n_inner__left i{
+    font-size: 30px;
+    color: #fff;
+    padding: 14px 10px 0px 0px;
+}
+.n_inner__right i{
+    font-size: 30px;
+    color: #333;
+    padding: 14px 10px 0px 0px;
+}
+/* 프로모션 서식 */
+.promotion{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background: #f6f5ef;
+    position: relative;
+    transition: 0.4s;
+    height: 663px;
+}
+/* 버튼 클릭시 프로모션박스에 적용할 서식 */
+.hide{
+    height: 0px !important;
+}
+
+.promotion>h2{display: none;}
+.proSlide{
+    width: calc(819px * 3 + 10px * 2); /*2477*/
+    height: 653px;
+    flex-shrink: 0;
+    position: relative;
+}
+.proSlide .swiper-slide{
+    text-align: center;
+}
+.proSlide .swiper-pagination{
+    position:absolute;bottom:0px;
+}
+ 
+.proSlide .swiper-button-prev,.proSlide .swiper-button-next{
+    position: absolute;
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    top: 270px; 
+    text-align: center;
+    padding-top: 7px;
+    box-sizing: border-box;
+}
+.proSlide .swiper-button-next{
+    right: 0px;  
+    right: 50%;
+    margin-right: -480px;
+}
+.proSlide .swiper-button-prev{
+    left: 0px;
+    left: 50%;
+    margin-left: -480px;
+}
+/* 리워드 서식 */
+.reward{
+    height: 241px;
+    background: rgb(39,39,39);
+    background: linear-gradient(69deg, rgba(39,39,39,1) 40%, rgba(213,199,152,1) 40%);
+}
+.reward_inner{
+    background-image: url('../images/rewards.jpg');
+    height: 241px;
+    width: 1100px;
+    margin: 0px auto;
+    position: relative;
+}
+.btn_group{
+    position: absolute;
+    right: 0px;
+    bottom: 30px;
+    width: 400px;
+
+}
+.btn{
+    width: 110px;
+    padding: 10px;
+    border: 4px;
+    border: 2px solid #333;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    transition: 0.4s;
+    border-radius: 3px;
+    transform: translateX(130px);
+}
+.btn:hover{
+    color: #fff;
+    background: #333;
+}
+.gift{width: 250px;}
+.btn_join, .btn_login{
+    display: inline-block!important;;
+    margin-bottom: 10px;
+}
+/* 영상콘텐츠 */
+.movie{
+    height: 700px;
+    width: 100%;
+    background: #333;
+    position: relative;
+}
+.movie .m_inner{
+    width: 1100px;height: 700px;
+    margin: 0px auto;
+    position: relative;
+    z-index: 12;
+}
+.m_inner img{
+    position: absolute;
+}
+.m_img1{
+    left: -60px; top: 30px;
+    animation-name: img1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes img1{
+    0%{
+        top: 20px;
+    }
+    50%{
+        top: 00px;
+    }
+    100%{
+        top: 20px;
+    }
+}
+
+.m_img2{
+    left: 0px; top: 400px;
+    animation-name: img2;
+    animation-duration: 3.8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes img2{
+    0%{
+        top: 350px;
+    }
+    50%{
+        top: 330px;
+    }
+    100%{
+        top: 350px;
+    }
+}
+
+.m_img3{
+    right: 0px; bottom: -60px;
+    animation-name: img3;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes img3{
+    0%{
+        top: 500px;
+    }
+    50%{
+        top: 480px;
+    }
+    100%{
+        top: 500px;
+    }
+}
+
+.youtube{
+    width: 1920px;
+    height: 700px;
+    position: absolute;
+    top: 0px; left: 0px;
+    background: #333;
+    z-index: 10;
+}
+
+.youtube video{
+    width: 100%;
+    height: 100%;
+}
+
+.cover{
+    background-image: url('../images/video_cover_pattern.png');
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 100%; height: 100%;
+    z-index: 11;
+}
+
+/* 아이스커피 블랜드 */
+.season-product{
+    background: url('../images/season_product_bg.jpg');
+    height: 400px;
+    
+}
+.season-product h2{
+    display: none;
+}
+.inner{
+    width: 1100px;
+    margin: 0px auto;
+    position: relative;
+}
+.season-product .coffe01{
+    position: absolute;
+}
+.season-product .txt_group{
+    position: absolute;
+    top: 110px;
+    right: 100px;
+    width: 480px;
+}
+.season-product .c_title{
+    margin-bottom: 10px;
+}
+.season-product .description{
+    margin-bottom: 15px;
+}
+.txt_group .btn{
+    transform: none;
+}
+
+.reserve{
+    background-image: url(../images/reserve_bg.jpg);
+}
+.reserve .inner{
+    height: 400px;
+    position: relative;
+}
+.reserve .reserve_logo{
+    position: absolute;
+    top: 110px;
+    left: 0;
+}
+.reserve .text-group{
+    position: absolute;
+    top: 124px;
+    left: 208px;
+}
+.reserve .product{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.btn--gold{transform: none;}
+
+/* pick */
+.pick{
+    background-image: url("../images/favorite_bg.jpg");
+    background-attachment: fixed;
+}
+.pick .inner{
+    padding: 110px 0;
+}
+.pick .text-group{
+    width: 362px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.pick .text-group .reserve_title{
+    margin-bottom: 40px;
+}
+.pick .text-group .description{
+    margin-bottom: 40px;
+}
+.pick .text-group .btn{
+    transform: none;
+}
+/* store */
+.store{
+    background-image: url("../images/reserve_store_bg.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+}
+.store .inner{
+    height: 600px;
+
+}
+/* find-store */
+.find-store{
+    background-image: url("../images/find_store_bg.jpg");
+}
+.find-store .inner{
+    height: 400px;
+}
+.find-store .texture1{
+    position: absolute;
+    top: 0;
+    left: 400px;
+}
+.find-store .texture2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.find-store .picture1{
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.5);
+    position: absolute;
+    top: -60px;
+    left: 0;
+}
+.find-store .picture2{
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.5);
+    position: absolute;
+    top: 150px;
+    left: 250px;
+}
+.find-store .text-group{
+    position: absolute;
+    top: 120px;
+    left: 550px;
+}
+.find-store .text-group .find_title{
+    margin-bottom: 20px;
+}
+.find-store .text-group .description{
+    margin-bottom: 20px;
+}
+.find-store .btn{
+    transform: none;
+}
+
+/* 화면 스크롤 동작시 움직이는 서식 show */
+.back-to-position{
+    opacity: 0;
+    transition-duration:1s ;
+}
+.back-to-position.to-left{
+    transform: translateX(150px);
+}
+.back-to-position.to-right{
+    transform: translateX(-150px);
+}
+.show .back-to-position{
+    opacity: 1;
+    transform: translateX(0);
+}
+.show .back-to-position.delay-1{transition-delay: 0.3s;}
+.show .back-to-position.delay-2{transition-delay: 1s;}
+.show .back-to-position.delay-3{transition-delay: 1.5s;}
+
+.store .inner{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.store .medal{
+    width: 334px;
+    height: 334px;
+    perspective: 600px;
+}
+.store .medal .front{
+    position: absolute;
+    transition: 1s;
+}
+.store .medal .back{
+    position: absolute;
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+    transition: 1s;
+}
+.store .medal:hover .front{
+    transform: rotateY(180deg);
+}
+.store .medal:hover .back{
+    transform: rotateY(0deg);
+}
+
+.store .medal .back .btn{
+    position: absolute;
+    top: 240px;
+    left:0;
+    right: 0;
+    margin: auto;
+}
+.store .medal .back .btn{
+    transform: none;
+}
+
+/* awards */
+.awards{
+    background: #272727;
+}
+.awards .inner{
+    padding: 40px 0;
+}
+.awards .swiper-button-next, .awards .swiper-button-prev{
+    width: 42px;
+    height: 42px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    columns: #fff;
+    position: absolute;
+    opacity: 3;
+}
+.awards .swiper-button-prev{
+    left: -100px;
+}
+.awards .swiper-button-next{
+    right: -100px;
+}
+.awards .swiper-button-prev:hover,
+.awards .swiper-button-next:hover{
+    background: #fff;
+    color: #333;
+}
+.awards .swiper-button-next::after,
+.awards .swiper-button-prev::after{
+    display: none;
+}
+
+/* footer */
+footer{
+    border-top: 1px solid #333;
+}
+footer .inner{
+    padding: 40px 0 60px 0;
+}
+footer .menu{
+    display: flex;
+    justify-content: center;
+}
+footer .menu li{
+    position: relative;
+}
+footer .menu li::before{
+    content: "";
+    width: 3px;
+    height: 3px;
+    background-color: #555;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -1px;
+    margin: auto;
+}
+footer .menu li:last-child::before{
+    display: none;
+}
+footer .menu li a{
+    display: block;
+    color: #ccc;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 15px;
+}
+footer .menu li a.orange{
+    color: #ea9926;
+}
+footer .btn_group{
+    margin-top: 20px;
+    display: flex;
+    transform: translateX(-350px);
+}
+footer .btn_group .btn{
+    font-size: 12px;
+    margin-right: 10px;
+}
+footer .btn_group .btn:last-child{
+    margin-right: 0px;
+}
+footer .btn_group .btn{
+    color: #fff;
+    border: 2px solid #fff;
+    transform: none;
+}
+footer .btn_group .btn:hover{
+    color: #333;
+    border: 2px solid #333;
+    background-color: #fff;
+}
+footer .info{
+    margin-top: 30px;
+    text-align: center;
+}
+footer .info span{
+    margin-right: 20px;
+    color: #999;
+    font-size: 12px;
+}
+footer .info span:last-child{
+    margin-right: 0;;
+}
+footer .copyright{
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 12px;
+}
+footer .logo{
+    margin: 30px auto 0;
+}

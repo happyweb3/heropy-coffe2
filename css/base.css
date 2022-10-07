@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/* 기본공통서식 */
+/* 나눔고딕 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 12px; /* 16이 기본이지만 보통글자는 12로 한디. */
+    color: #333;/* 글자색은 검정이지만 회색으로 설정함-웹접근성이 좋게 하기 위함 */
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
